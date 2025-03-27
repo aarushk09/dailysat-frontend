@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# DailySAT Frontend
+
+A modern, interactive frontend for the DailySAT platform designed to help students prepare for the SAT exam with daily practice questions and comprehensive resources.
+
+## Features
+
+- 📱 **Responsive Design** - Works seamlessly on desktop, tablet, and mobile devices
+- ✨ **Modern UI** - Sleek design with animations and interactive elements
+- 🧩 **Interactive Components** - 3D cards, animations, and hover effects
+- 📊 **Progress Tracking** - Visual representation of student progress
+- 📝 **Practice Resources** - Comprehensive collection of study materials
+- 🛠️ **Workshops** - Information about upcoming educational workshops
+
+## Tech Stack
+
+- **Framework**: Next.js 14
+- **Styling**: Tailwind CSS
+- **Animations**: Framer Motion
+- **UI Components**: Radix UI
+- **TypeScript**: Type-safe code
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 18+
+- npm or yarn
+
+### Installation
 
 ```bash
+# Clone the repository
+git clone https://github.com/aarushk09/dailysat-frontend.git
+
+# Navigate to the project directory
+cd dailysat-frontend
+
+# Install dependencies
+npm install
+
+# Start the development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Project Structure
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- `/app` - Next.js app router pages
+- `/components` - Reusable UI components
+- `/src/components/ui` - Core UI components (buttons, cards, etc.)
+- `/public` - Static assets
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Contributing
 
-## Learn More
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-To learn more about Next.js, take a look at the following resources:
+## License
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Contact
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+For any inquiries, please reach out to the DailySAT team.

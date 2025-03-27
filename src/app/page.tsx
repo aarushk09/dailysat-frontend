@@ -185,7 +185,7 @@ export default function Home() {
               transition={{ delay: 0.7, duration: 0.5 }}
               className="w-full max-w-sm space-y-2 mt-8"
             >
-              <GlowingButton>Start Practicing Now</GlowingButton>
+              <GlowingButton className="w-full">Start Practicing Now</GlowingButton>
             </motion.div>
           </motion.div>
 
@@ -350,6 +350,8 @@ export default function Home() {
               transition={{ duration: 0.5, delay: 0.1 }}
             >
               <AnimatedCard
+                className="w-full"
+                onStart={() => {}}
                 title="Official SAT Practice Resources"
                 badges={[
                   { text: "Reading", color: "blue" },
@@ -371,6 +373,8 @@ export default function Home() {
               transition={{ duration: 0.5, delay: 0.2 }}
             >
               <AnimatedCard
+                className="w-full"
+                onStart={() => {}}
                 title="Math Concept Review"
                 badges={[
                   { text: "Math", color: "purple" },
@@ -392,12 +396,14 @@ export default function Home() {
               transition={{ duration: 0.5, delay: 0.3 }}
             >
               <AnimatedCard
+                className="w-full"
+                onStart={() => {}}
                 title="Reading & Writing Review"
                 badges={[
                   { text: "Reading", color: "blue" },
                   { text: "Writing", color: "green" },
                   { text: "Grammar", color: "pink" },
-                  { text: "Comprehensive" },
+                  { text: "Comprehensive", color: "yellow" },
                 ]}
                 description="Complete verbal review with detailed explanations and vocabulary building exercises."
                 duration="4 weeks"
@@ -524,6 +530,7 @@ export default function Home() {
               transition={{ duration: 0.5, delay: 0.1 }}
             >
               <WorkshopCard
+                image="https://placehold.co/600x400/3b82f6/ffffff/png?text=Post-Secondary+Education"
                 title="Post-Secondary Education and Finances"
                 partner="DailySAT x StockSavvy"
                 attendees="60+"
@@ -538,6 +545,7 @@ export default function Home() {
               transition={{ duration: 0.5, delay: 0.2 }}
             >
               <WorkshopCard
+                image="https://placehold.co/600x400/3b82f6/ffffff/png?text=Broadcasting+Workshop"
                 title="Broadcasting and Content Development"
                 partner="DailySAT x FTN Broadcasting"
                 attendees="1000+"
@@ -576,6 +584,7 @@ export default function Home() {
               transition={{ duration: 0.5, delay: 0.1 }}
             >
               <ResourceCard
+                icon={<Database className="h-6 w-6 text-blue-600" />}
                 title="SAT Math Formula Sheet"
                 description="A comprehensive collection of all math formulas you need to know for the SAT. Includes geometry, algebra, and statistics formulas with examples."
                 color="blue"
@@ -602,6 +611,7 @@ export default function Home() {
               transition={{ duration: 0.5, delay: 0.2 }}
             >
               <ResourceCard
+                icon={<BookCheck className="h-6 w-6 text-green-600" />}
                 title="SAT Vocabulary Builder"
                 description="Master the most common SAT vocabulary words with our interactive flashcards and memory techniques. Includes usage examples from past tests."
                 color="green"
@@ -688,7 +698,7 @@ export default function Home() {
             transition={{ duration: 0.5 }}
             className="flex justify-center mt-16"
           >
-            <GlowingButton>Let's Go</GlowingButton>
+            <GlowingButton className="w-full">Let's Go</GlowingButton>
           </motion.div>
         </div>
       </section>
@@ -746,7 +756,7 @@ export default function Home() {
               Join thousands of students who have improved their SAT scores with DailySAT. Start your journey today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <GlowingButton>Start Free Trial</GlowingButton>
+              <GlowingButton className="w-full">Start Free Trial</GlowingButton>
               <Button variant="outline" size="lg" className="rounded-full">
                 Learn More
               </Button>
@@ -781,7 +791,7 @@ export default function Home() {
   )
 }
 
-function Clock(props) {
+function Clock(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}

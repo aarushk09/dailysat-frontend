@@ -4,11 +4,20 @@ import { useState } from "react"
 import { motion } from "framer-motion"
 import { cn } from "@/lib/utils"
 
-export function ThreeDCard({ children, className, ...props }) {
+type ThreeDCardProps = {
+  children: React.ReactNode
+  className?: string
+}
+
+export function ThreeDCard({ 
+  children, 
+  className,
+  ...props
+}: ThreeDCardProps & React.HTMLAttributes<HTMLDivElement>) {
   const [rotateX, setRotateX] = useState(0)
   const [rotateY, setRotateY] = useState(0)
 
-  function handleMouseMove(e) {
+  function handleMouseMove(e: React.MouseEvent<HTMLDivElement>) {
     const card = e.currentTarget
     const box = card.getBoundingClientRect()
     const x = e.clientX - box.left
@@ -37,7 +46,7 @@ export function ThreeDCard({ children, className, ...props }) {
       )}
       style={{
         transform: `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`,
-        transformStyle: "preserve-3d",
+        transformStyle: "preserve-3d" as const,
         transition: "transform 0.2s ease-out",
       }}
       onMouseMove={handleMouseMove}

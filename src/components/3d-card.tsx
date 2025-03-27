@@ -1,7 +1,6 @@
 "use client"
 
 import { useState } from "react"
-import { motion } from "framer-motion"
 import { cn } from "@/lib/utils"
 
 type ThreeDCardProps = {
@@ -39,7 +38,7 @@ export function ThreeDCard({
   }
 
   return (
-    <motion.div
+    <div
       className={cn(
         "group relative rounded-lg border bg-white shadow-md cursor-pointer transition-all duration-200 hover:shadow-xl",
         className,
@@ -56,7 +55,7 @@ export function ThreeDCard({
       <div className="relative z-10 h-full">{children}</div>
 
       <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-blue-100 opacity-0 group-hover:opacity-100 rounded-lg transition-opacity duration-300" />
-    </motion.div>
+    </div>
   )
 }
 
